@@ -1,0 +1,6 @@
+{
+  "Name": "Legal_Store",
+  "ProjectType": "Process",
+  "Description": "Automated Process to Download required Legal PDFs from a Specific Website.",
+  "MainFile": "Main.xaml"
+}
