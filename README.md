@@ -13,11 +13,46 @@ This project automates the complete workflow from **index page → handle pages 
 5. **Duplicate-Safe Execution** through file-existence checks.
 6. **Production-Ready UiPath Workflow Design**
 
+### Objectives
+
+The primary goal of this automation is to :
+
+1. Create an automated data collection pipeline to support a **RAG-based Legal Advisor Chatbot**, where manually sourcing and maintaining legal Act PDFs is not practical.
+2. Automate the process of downloading a large number of official Indian legal Act PDFs using **UiPath RPA**, thereby reducing manual effort and time consumption.
+3. Handle the complete navigation flow from the Bare Acts listing page to IndiaCode handle pages and finally to the actual law PDF links in a reliable and repeatable manner.
+4. Store downloaded legal documents in a structured and maintainable format using meaningful, human-readable, and OS-safe filenames.
+5. Ensure that the automation is scalable and reliable by incorporating de-duplication, logging, and basic error-handling mechanisms as the number of legal Acts increases.
+
+### Workflow Architecture
+
+**Phase 1 – Collect Handle URLs**
+1. Open Bare Acts index page
+2. Locate and filter valid Act links
+3. Extract href values
+4. Store unique handle URLs in collection
+
+**Phase 2 – Resolve PDFs & Download**
+1. Loop through each handle URL
+2. Navigate to IndiaCode page
+3. Locate PDF section
+4. Extract:
+   - Law name
+   - Bitstream PDF link
+5. Sanitize law name
+6. Download PDF using HTTP Request
+7. Save to local directory
+
+
 ### Output
 
 
 
 https://github.com/user-attachments/assets/632b8e7d-e515-42c3-8600-6b5be5ad2006
+
+
+### Conclusion
+
+**Legal-Store** successfully automates the end-to-end collection of official Indian legal Act PDFs, replacing a time-consuming manual process with a reliable **UiPath RPA workflow**. This automation also provides a scalable data foundation for my RAG-based Legal Advisor Chatbot and other legal analytics systems.
 
 
 
