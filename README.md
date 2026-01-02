@@ -23,6 +23,21 @@ The primary goal of this automation is to :
 4. Store downloaded legal documents in a structured and maintainable format using meaningful, human-readable, and OS-safe filenames.
 5. Ensure that the automation is scalable and reliable by incorporating de-duplication, logging, and basic error-handling mechanisms as the number of legal Acts increases.
 
+### Prerequisites
+
+#### Software
+
+- **UiPath Studio (Windows)** – This project is built entirely using UiPath Studio as a no-code / low-code RPA solution.
+- **Windows OS** – Required for UiPath Studio and Windows-based automation.
+
+#### UiPath Dependencies
+
+Install the following packages via Manage Packages in UiPath Studio:
+
+- **UiPath.System.Activities (v25.10.3)** – Core workflow logic, control flow, file operations, and logging.
+- **UiPath.UIAutomation.Activities (v25.10.21)** – Browser automation, web navigation, and dynamic data extraction.
+- **UiPath.WebAPI.Activities (v2.3.2)** – HTTP/API handling and final PDF URL resolution.
+
 ### Workflow Architecture
 
 **Phase 1 – Collect Handle URLs**
